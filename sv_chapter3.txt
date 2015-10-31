@@ -1,0 +1,227 @@
+    Kapitel 3
+    ATT SKRIVA PROGRAM
+
+Ämnen som behandlas i detta kapitel:
+
+•   Exekveringsflödet
+•   Strängar
+•   Sammanslagning av strängar
+•   Datatyper (så som strängar och heltal)
+•   Att använda fileditorn för att skriva program
+•   Att spara och köra program i IDLE
+•   Funktionen print()
+•   Funktionen input()
+•   Kommentarer
+•   Skiftlägeskänslighet
+
+Nu räcker det med matte för ett tag. Python är mer än bara en kalkylator. Låt oss nu titta på vad Python kan göra med text. I det här kapitlet får du lära dig att lagra text i variabler, att kombinera ihop texter och att visa text på skärmen. 
+
+Nästan alla program visar text för användaren, och användaren matar in text i programmen med hjälp av tangentbordet. Du kommer också att skapa ditt första program. Det här programmet skriver ut hälsningen “Hejsan världen!” och frågar efter ditt namn.
+
+Strängar
+
+I Python så kallas textvärden för strängar. Strängvärden kan användas på samma sätt som heltals- eller flyttalsvärden. Du kan lagra strängar i variabler. I kod så börjar och slutar strängvärden med enkla citattecken ('). Testa att skriva in den här koden i den interaktiva kommandotolken:
+
+>>> skräp = 'hejsan'
+
+De enkla citattecknen talar om för Python var strängen börjar och slutar. De ingår inte i själva strängvärdets text. Om du nu skriver in skräp i den interaktiva tolken så kommer du att se innehållet i skräp-variabeln. Du kanske minns att Python utvärderar variabler till de värden som är lagrade i dem. I det här fallet så är värdet strängen 'hejsan':
+
+>>> skräp = 'hejsan'
+>>> skräp
+'hejsan'
+
+Strängar kan innehålla alla tecken som finns på tangentbordet och kan vara nästan hur långa som helst. Här är några exempel på strängar:
+
+'hejsan'
+'Hallå där!'
+'KATTUNGAR'
+'7 äpplen, 14 apelsiner, 3 citroner'
+'Allt som inte hänför sig till elefanter är irrelevant.'
+'För länge sedan, i en galax långt, långt borta...'
+'O*&#wY%*&OCfsdYO*&gfC%YO*&%3yc8r2'
+
+Sammanslagning av strängar
+
+Precis som heltal och flyttal kan strängvärden, med hjälp av operatorer, sättas ihop till uttryck. Du kan slå ihop två strängar med operatorn +. Det här kallas för konkatenering, eller sammanslagning, av strängar. Testa att skriva in 'Hejsan' + 'världen!' i den interaktiva kommandotolken:
+
+>>> 'Hejsan' + 'världen!'
+'Hejsanvärlden!'
+
+Uttrycket utvärderades till ett enda strängvärde, 'Hejsanvärlden!'. Det finns inget mellanslag mellan orden eftersom det inte fanns något mellanslag i de strängar som slogs ihop, till skillnad från i detta exempel:
+
+>>> 'Hejsan ' + 'världen!'
+'Hejsan världen!'
+
+Operatorn + funkar på olika sätt med sträng- och heltalsvärden eftersom det är olika datatyper. Alla värden har en datatyp. Värdet 'Hejsan' har datatypen sträng. Värdet 5 har datatypen heltal. Datatypen talar om för Python vad operatorer ska göra när uttryck utvärderas. Operatorn + slår ihop strängvärden men adderar heltalsvärden och flyttalsvärden.
+
+Att skriva program i IDLE:s fileditor
+
+Fram tills nu har du skrivit in en instruktion åt gången i IDLE:s interaktiva tolk. Men när du skriver program så skriver du flera instruktioner och kör dem alla på en och samma gång. Nu ska du få skriva ditt första program!
+
+IDLE har en annan del som kallas för fileditorn. Klicka på File i överkanten av fönstret med Pythontolken. Välj sedan New File. Ett tomt fönster kommer att öppnas och det är där du ska skriva in programmets kod, som i Figur 3-1.
+
+Figur 3-1: Fileditorns fönster (till vänster) och den interaktiva kommandotolken (till höger).
+
+De två fönstren liknar varandra, men kom ihåg: Den interaktiva tolken har en prompt som börjar med >>>. Det har inte fileditorns fönster.
+
+Hejsan världen!
+
+Enligt traditionen ska det första programmet man skapar skriva ut texten ”Hello world!”, eller ”Hejsan världen!”, på skärmen. Nu ska du få skapa ditt eget Hello world-program.
+
+När du matar in ditt program, skriv inte in siffrorna till vänster om koden. De finns bara där för att boken ska kunna referera till radnummer i koden. Längst ner till höger i fileditorn ser du på vilken rad den blinkande markören befinner sig. Figur 3-2 visar att markören är på rad 1 och kolumn 0.
+
+Figur 3-2: I det nedre högra hörnet av fileditorn ser du på vilken rad markören befinner sig.
+
+hejsan.py
+
+Skriv in följande text i det nya fileditor-fönstret. Det här är programmets källkod. Den innehåller de instruktioner som Python kommer att följa när programmet körs.
+
+OBS, VIKTIGT! Programmen i den här boken kan bara köras med Python 3, inte med Python 2. När IDLE-fönstret öppnas, så ska det stå något i stil med “Python 3.4.2” längst upp. Du kan ha både Python 2 och Python 3 installerat samtidigt. För att ladda ner Python 3, gå till https://python.org/download/.
+
+1. # Det här programmet säger hej och frågar efter ett namn.
+2. print('Hejsan världen!')
+3. print('Vad heter du?')
+4. namn = input()
+5. print('Trevligt att träffas, ' + namn)
+
+IDLE-programmet markerar olika typer av instruktioner med olika färger. När du har skrivit in koden ska fönstret se ut så här:
+
+Figur 3-3: Fileditorns fönster ska se ut så här när du har skrivit in koden.
+
+Att spara ditt program
+
+När du väl har matat in källkoden, spara den genom att klicka på File ► Save As. Eller tryck Ctrl-S för att spara med ett snabbkommando. Figur 3-4 visar Spara som-fönstret som kommer att öppnas. Skriv hejsan.py i textfältet för filnamn och klicka sedan på Spara.
+
+Figur 3-4: Spara programmet.
+
+Du bör spara dina program ofta medan du skriver dem. På det sättet så förlorar du inte så mycket arbete ifall datorn krascher, eller om du råkar avsluta IDLE av misstag.
+
+Att öppna program som du har sparat
+
+För att öppna ett program som du tidigare har sparat, välj File ► Open. Välj filen i det fönster som öppnas och klicka på Öppna-knappen. Ditt sparade program kommer att öppnas i fileditorns fönster.
+
+Nu är det dags att köra programmet. Välj File ► Run ► Run Module, eller så trycker du bara på F5 medan du står i fileditorns fönster. Ditt program kommer att köras i den interaktiva tolken.
+
+Skriv in ditt namn när programmet frågar efter det. Det kommer att se ut som i Figur 3-5:
+
+Figur 3-5: Den interaktiva tolken när hejsan.py har körts.
+
+När du skriver in ditt namn och trycker på ENTER, så kommer programmet att hälsa på dig. Grattis! Du har skrivit ditt första program och är nu en datorprogrammerare. Tryck F5 igen för att köra programmet en andra gång och skriv in ett annat namn.
+
+Om du fick ett felmeddelande, jämför din kod med bokens kod med hjälp av verktyget på http://invpy.com/diff. Kopiera och klistra in din kod från fileditorn på webbsidan och klicka på knappen Compare. Det här verktyget kommer att markera skillnader mellan din kod och koden i boken, som i Figur 3-6.
+
+Figur 3-6: Diff-verktyget på http://invpy.com/diff
+
+Ifall du under programmeringen får ett fel av typen NameError som ser ut så här:
+
+Hejsan världen!
+Vad heter du?
+Albert
+Traceback (most recent call last):
+  File "C:/Python26/test1.py", line 4, in <module>
+    myName = input()
+  File "<string>", line 1, in <module>
+NameError: name 'Albert' is not defined
+
+... så betyder det att du använder Python 2 i stället för Python 3. Installera en version av Python 3 från http://python.org/download. Kör sedan programmet med Python 3.
+
+Hur "Hejsan världen"-programmet fungerar
+
+Varje rad med kod är en instruktion som tolkas av Python. Tillsammans så utgör de här instruktionerna programmet. Instruktionerna i ett datorprogram är som stegen i ett kokboksrecept. Varje instruktion utförs i tur och ordning, med start längst upp i programmet och nedåt genom listan med instruktioner.
+
+Steget som Python befinner sig på i programmet kallas för exekveringssteget. När programmet startas exekveras den första instruktionen. Därefter fortsätter exekveringen nedåt till nästa instruktion.
+
+Låt oss titta på varje kodrad för att se vad den betyder. Vi börjar med rad 1.
+
+Kommentarer
+
+1. # Det här programmet säger hej och frågar efter ett namn.
+
+Den här instruktionen är en kommentar. Varje textrad som inleds med tecknet # (nummertecknet) är en kommentar. Kommentarerna är inte till för Python, utan för den som ska läsa programmet, det vill säga du. Python ignorerar kommentarer. Kommentarer är programmerarens anteckningar om vad koden gör. Du kan skriva vad som helst i en kommentar. För att det ska bli lättare att läsa källkoden så har kommentarerna i den här boken en ljusgrå färg.
+
+Det är vanligt att programmerare skriver en kommentar med programmets namn längst upp i källkoden.
+
+Funktioner
+
+En funktion är som ett mini-program inuti ditt program. Funktioner innehåller flera instruktioner som ska utföras när funtionen anropas. Det finns en hel del inbyggda funktioner i Python. Två av dessa funktioner, print() and input(), kommer att beskrivas härnäst. En bra grej med funktioner är att du bara behöver veta vad de gör, inte hur de gör det.
+
+Ett funktionsanrop är en instruktion som talar om för Python att koden inuti funktionen ska köras. Till exempel så anropar ditt program funktionen print() för att en sträng ska skrivas ut på skärmen. Funktionen print() tar den sträng som anges mellan parenteserna som indata och visar texten på skärmen.
+
+För att skriva Hejsan världen! på skärmen, skriv in funktionsnamnet print, följt av en vänsterparentes, strängen 'Hejsan världen!' och till sist en högerparentes.
+
+Funktionen print()
+
+2. print('Hejsan världen!')
+3. print('Vad heter du?')
+
+Raderna 2 och 3 är anrop till print()-funktionen. Ett värde mellan parenteserna i ett funktionsanrop kallas för ett argument. Argumentet i anropet till print()-funktionen på rad 2 är 'Hejsan världen!'. Argumentet i funktionsanropet på rad 3 är 'Vad heter du?'. Det här kallas för att man skickar argument till print()-funktionen.
+
+I den här boken så följs alla funktionsnamn av parenteser. På så vis är det tydligt att när det står print() så talar vi om en funktion med namnet print(), inte en variabel kallad print. Det här är som att de enkla citattecknen kring talet '42' talar om för Python att du menar strängen '42' och inte heltalet 42.
+
+Funktionen input()
+
+4. namn = input()
+
+Rad 4 är en tilldelningssats med en variabel (namn) och ett funktionsanrop (input()). När input() anropas så väntar programmet på att användaren ska mata in text. Textsträngen som användaren matar in blir det värde som funktionsanropet utvärderas till. Funktionsanrop kan användas i uttryck på samma ställen där värden kan användas.
+
+Värdet som funktionsanropet utvärderas till kallas för returvärdet. (Faktum är att "värdet som returneras vid ett funktionsanrop" betyder samma sak som "värdet ett funktionsanrop utvärderas till".) I det här fallet så är returvärdet från input()-funktionen den sträng - namnet - som användaren skrev in. Om användaren skrev in "Albert" så utvärderas anropet till funktionen input() till strängen 'Albert'. Utvärderingen ser ut såhär:
+
+namn = input()
+            ▼
+namn = 'Albert'
+
+På det här sättet sparas strängvärdet 'Albert' i variabeln namn.
+
+Använda uttryck i funktionsanrop
+
+5. print('Trevligt att träffas, ' + namn)
+
+Sista raden består av ett annat anrop till funktionen print(). Uttrycket 'Trevligt att träffas, ' + namn står mellan parenteserna i funktionsanropet. Men argument består alltid av enskilda värden, så Python kommer först att utvärdera det här uttrycket och sedan skicka värdet som argumentet. Om 'Albert' har lagrats i namn, så kommer utvärderingen att se ut såhär:
+
+print('Trevligt att träffas, ' + namn)
+                         ▼
+print('Trevligt att träffas, ' + 'Albert')
+                         ▼
+print('Trevligt att träffas, Albert')
+
+Det är så det går till när programmet hälsar på användaren med hans eller hennes namn.
+
+Avsluta programmet
+
+När sista raden i programmet har exekverats så terminerar, eller avslutas, det. Det betyder att körningen av programmet upphör, och Python glömmer alla värden som lagrats i variabler, inklusive strängen som sparats i namn. Om du kör programmet igen och matar in ett annat namn så kommer programmet att använda det namnet.
+
+Hejsan världen!
+Vad heter du?
+Carolina
+Trevligt att träffas, Carolina
+
+Kom igåg, datorn gör exakt det som du programmerar den att göra. Datorer är dumma och följer bara de instruktioner du ger dem. Datorn bryr sig inte om du matar in ditt eget namn, någon annans namn, eller för den delen något larvigt. Skriv in vad du vill. Datorn kommer att göra på precis samma sätt:
+
+Hejsan världen!
+Vad heter du?
+bajs
+Trevligt att träffas, bajs
+
+Variabelnamn
+
+Om man ger variabler beskrivande namn så blir det lättare att förstå vad ett program gör. Föreställ dig att du har flyttat till ett nytt hus, och du har märkt alla flyttkartonger med "Grejer". Det skulle inte vara till mycket hjälp!
+
+I stället för namn hade du kunnat kalla den här variabeln för gustavVasa eller nAmN. Python hade inte brytt sig. Programmet hade körts på samma sätt.
+
+Variabelnamn är skiftlägeskänsliga. Det betyder att samma variabelnamn skrivet i olika skiftlägen betraktas som olika variabler. Så skräp, SKRÄP, Skräp, och sKRÄP är fyra olika variabler i Python. De innehåller alla sina egna, separata värden. Det är en dålig idé att ha variabelnamn av det här slaget i ditt program. Använd beskrivande namn på dina variabler i stället.
+
+Variabelnamn skrivs oftast med små bokstäver. Om flera ord ingår i variabelnamnet, inled varje ord efter det första med stor bokstav. Det här gör koden lättare att läsa. Till exempel så är variabelnamnet vadJagÅtTillFrukostIMorse  mycket lättare att läsa än vadjagåttillfrukostimorse. Det här är en konvention: man brukar göra så vid programmering i Python, även om det är frivilligt.
+
+Korta variabelnamn är bättre än långa: frukost eller matIMorse är mer läsbara namn än vadJagÅtTillFrukostIMorse.
+
+I bokens exempel med den interaktiva kommandotolken används variabelnamn som skräp, ägg, skinka och bacon. Det är för att variabelnamnen i dessa exempel inte är särskilt viktiga. Men programmen i boken använder beskrivande namn. Det bör dina program också göra.
+
+Sammanfattning
+
+När du har lärt dig om strängar och funktioner, så kan du börja skapa program som interagerar med användaren. Det här är viktigt eftersom användare och datorer ofta kommunicerar med hjälp av text. Användare matar in text via tangentbordet till input()-funktionen. Datorn visar text på skärmen med print()-funktionen.
+
+Strängar är bara värden av en viss datatyp. Alla värden har en datatyp och det finns många datatyper i Python. Operatorn + kan användas för att slå ihop strängar.
+
+Funktioner används för att utföra mer komplicerade instruktioner i ditt program. Python har många inbyggda funktioner som du kommer att få veta mer om i den här boken. Funktionsanrop kan användas i uttryck på samma ställen som värden kan användas.
+
+Den instruktion i ditt program där Python befinner sig för närvarande kallas för exekveringssteget. I nästa kapitel får du lära dig mer om hur man får exekveringen att ta andra vägar än bara rakt nedåt genom programmet. När du har lärt dig det så är du redo att börja skapa spel.
